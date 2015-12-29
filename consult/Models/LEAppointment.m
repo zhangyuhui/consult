@@ -38,7 +38,9 @@
                                                        @"created_at": @"createdAt",
                                                        @"updated_at": @"updatedAt",
                                                        @"time_end": @"timeEnd",
-                                                       @"time_start": @"timeStart"
+                                                       @"time_start": @"timeStart",
+                                                       @"call_end": @"callEnd",
+                                                       @"call_start": @"callStart"
                                                        }];
 }
 

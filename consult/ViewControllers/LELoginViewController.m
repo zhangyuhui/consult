@@ -36,9 +36,6 @@
         self.usernameTextField.text = accountService.account.userName;
         self.passwordTxtField.text = accountService.account.password;
     }
-    
-    //self.usernameTextField.text = @"zhangyuhui";
-    //self.passwordTxtField.text = @"20091030";
 }
 
 - (void)didReceiveMemoryWarning {

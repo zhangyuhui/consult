@@ -63,13 +63,12 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kh-xq-HFR">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kh-xq-HFR">
                         <rect key="frame" x="90" y="89" width="72" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="6lS-sy-YhA"/>
                             <constraint firstAttribute="width" constant="72" id="C0I-Tv-V80"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <state key="normal" title="Join">
                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
@@ -121,6 +120,7 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
+                <outlet property="actionButton" destination="3kh-xq-HFR" id="cIc-JI-8hr"/>
                 <outlet property="iconImageView" destination="xR3-Wb-2yr" id="X8f-Uq-GoE"/>
                 <outlet property="nameLabel" destination="pMf-Ap-3DB" id="v61-MH-Zlg"/>
                 <outlet property="overlayView" destination="UUx-KO-52N" id="lRv-G3-d3V"/>

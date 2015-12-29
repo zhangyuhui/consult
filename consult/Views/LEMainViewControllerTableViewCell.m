@@ -8,6 +8,9 @@
 
 #import "LEMainViewControllerTableViewCell.h"
 #import "LEDefines.h"
+#import "NSDate+Addition.h"
+
+#define TIMESTAMP_DATA_FORMAT @"yyyy-MM-dd"
 
 @interface LEMainViewControllerTableViewCell ()
 @property (strong, nonatomic) IBOutlet UIView *overlayView;
@@ -60,6 +63,7 @@
         
         self.nameLabel.text = self.appointment.inviteeUser.fullName;
         self.priceLabel.text = [NSString stringWithFormat:@"$%.2f", self.appointment.pay];
+        [self updateStatusDisplay:self.appointment.status start:self.appointment.timeStart end:self.appointment.timeEnd];
     }
 }
 
@@ -73,6 +77,62 @@
 - (IBAction)clickActionButton:(id)sender {
     if ([self.delegate respondsToSelector:@selector(mainViewControllerTableViewCell:startVideoCall:)]) {
         [self.delegate mainViewControllerTableViewCell:self startVideoCall:self.appointment.inviteeUser];
+    }
+}
+
+- (void)updateStatusDisplay:(LEAppointmentStatus)status start:(NSDate*)start end:(NSDate*)end {
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:TIMESTAMP_DATA_FORMAT];
+    NSString *dateString = [dateFormatter stringFromDate:start];
+    
+    NSDate *current = [NSDate date];
+    if ([current earlierDate:start]) {
+        self.statusLabel.text = [NSString stringWithFormat:@"%@ Upcomming", dateString];
+    } else if ([current laterDate:start]) {
+        self.statusLabel.text = [NSString stringWithFormat:@"%@ Passed", dateString];;
+    } else {
+        self.statusLabel.text = [NSString stringWithFormat:@"%@ Now", dateString];
+    }
+    
+    switch (status) {
+        case LEAppointmentStatusReady: {
+            if ([current earlierDate:start]) {
+                [self.actionButton setTitle:@"Soon" forState:UIControlStateNormal];
+            } else if ([current laterDate:start]) {
+                [self.actionButton setTitle:@"Passed" forState:UIControlStateNormal];
+            } else {
+                [self.actionButton setTitle:@"Call" forState:UIControlStateNormal];
+            }
+        }
+            break;
+        case LEAppointmentStatusCalling:
+            self.statusLabel.text = @"Now";
+            [self.actionButton setTitle:@"Calling" forState:UIControlStateNormal];
+            break;
+        case LEAppointmentStatusOngoing:
+            [self.actionButton setTitle:@"Ongoing" forState:UIControlStateNormal];
+            break;
+        case LEAppointmentStatusFinished:
+            [self.actionButton setTitle:@"Finished" forState:UIControlStateNormal];
+            if (self.appointment.callStart && self.appointment.callEnd) {
+                self.statusLabel.text = [NSDate stringFromTimeInterval:[self.appointment.callStart timeIntervalSince1970]];
+            }
+            break;
+        case LEAppointmentStatusAccepted:
+            [self.actionButton setTitle:@"Accepted" forState:UIControlStateNormal];
+            break;
+        case LEAppointmentStatusRejected:
+            [self.actionButton setTitle:@"Rejected" forState:UIControlStateNormal];
+            break;
+        case LEAppointmentStatusIgnored:
+            [self.actionButton setTitle:@"Ignored" forState:UIControlStateNormal];
+            break;
+        case LEAppointmentStatusCancelled:
+            [self.actionButton setTitle:@"Cancelled" forState:UIControlStateNormal];
+            break;
+        default:
+            break;
     }
 }
 

@@ -744,7 +744,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/consult/Libraries/phoneGap/CordovaLib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = consult;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobile.consul;
 				PRODUCT_NAME = consult;
 				PROVISIONING_PROFILE = "";
 			};
@@ -771,7 +771,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/consult/Libraries/phoneGap/CordovaLib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = consult;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobile.consul;
 				PRODUCT_NAME = consult;
 				PROVISIONING_PROFILE = "";
 			};

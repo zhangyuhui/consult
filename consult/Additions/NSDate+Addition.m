@@ -46,13 +46,13 @@
         return dateString;
     }
     else if (hours > 0) {
-        return (hours == 1) ? NSLocalizedString(@"1小时前", nil) : [NSString stringWithFormat: NSLocalizedString(@"%d小时前", nil), hours];
+        return (hours == 1) ? NSLocalizedString(@"1 hour ago", nil) : [NSString stringWithFormat: NSLocalizedString(@"%d hours ago", nil), hours];
     } 
     else if (minutes > 0) {
-        return (minutes == 1) ? NSLocalizedString(@"1分钟前", nil) : [NSString stringWithFormat: NSLocalizedString(@"%d分钟前", nil), minutes];
+        return (minutes == 1) ? NSLocalizedString(@"1 minute ago", nil) : [NSString stringWithFormat: NSLocalizedString(@"%d minutes ago", nil), minutes];
     } 
     else {
-         return (seconds == 1) ? NSLocalizedString(@"1秒钟前", nil) : [NSString stringWithFormat: NSLocalizedString(@"%d秒钟前", nil), seconds];
+         return (seconds == 1) ? NSLocalizedString(@"1 seccond ago", nil) : [NSString stringWithFormat: NSLocalizedString(@"%d secconds ago", nil), seconds];
     }
 }
 
