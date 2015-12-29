@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Host</key>
+	<string>https://api.quickblox.com</string>
+	<key>ApplicationId</key>
+	<integer>32749</integer>
+	<key>AuthKey</key>
+	<string>wQ9RyO5jV4zMJtz</string>
+	<key>AuthSecret</key>
+	<string>nB3RRSaEpWtTCMm</string>
+	<key>AccountKey</key>
+	<string>NNx7bqBmpNmyZomaGzsf</string>
+</dict>
+</plist>
