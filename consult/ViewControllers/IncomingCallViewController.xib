@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IncomingCallViewController">
+            <connections>
+                <outlet property="callInfoTextView" destination="Tfd-Ms-AjR" id="Hib-Kp-4zj"/>
+                <outlet property="toolbar" destination="oVf-zH-Ygo" id="Irc-gl-D2X"/>
+                <outlet property="view" destination="9sw-i9-hHi" id="GGn-0w-0LB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="9sw-i9-hHi">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfd-Ms-AjR">
+                    <rect key="frame" x="10" y="254" width="300" height="90"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="eld-mF-0Fm"/>
+                        <constraint firstAttribute="height" constant="90" id="h0a-zv-lOK"/>
+                    </constraints>
+                    <attributedString key="attributedText">
+                        <fragment content="User 1, User 2, User 3, User 4, User5, User 6, User 7, User8, User 9">
+                            <attributes>
+                                <color key="NSColor" red="0.31422651930000001" green="0.31422651930000001" blue="0.31422651930000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="19" name="HelveticaNeue-Thin"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incoming Audio Call - 2:35" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16w-gH-lD7">
+                    <rect key="frame" x="16" y="193" width="288" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="23" id="vBX-Pu-1Dz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="21"/>
+                    <color key="textColor" red="0.1068638393" green="0.1068638393" blue="0.1068638393" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oVf-zH-Ygo" customClass="QBToolBar">
+                    <rect key="frame" x="0.0" y="468" width="320" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="fTT-x7-gKO"/>
+                    </constraints>
+                    <items/>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="16w-gH-lD7" firstAttribute="top" secondItem="9sw-i9-hHi" secondAttribute="top" constant="193" id="PbS-6j-tUN"/>
+                <constraint firstAttribute="trailing" secondItem="16w-gH-lD7" secondAttribute="trailing" constant="16" id="PjF-T0-mm3"/>
+                <constraint firstItem="16w-gH-lD7" firstAttribute="leading" secondItem="9sw-i9-hHi" secondAttribute="leading" constant="16" id="Sq2-om-yY5"/>
+                <constraint firstItem="oVf-zH-Ygo" firstAttribute="leading" secondItem="9sw-i9-hHi" secondAttribute="leading" id="YWI-rn-Itg"/>
+                <constraint firstItem="Tfd-Ms-AjR" firstAttribute="top" secondItem="16w-gH-lD7" secondAttribute="bottom" constant="38" id="axY-s8-t49"/>
+                <constraint firstAttribute="centerX" secondItem="Tfd-Ms-AjR" secondAttribute="centerX" id="eM8-DF-bOa"/>
+                <constraint firstAttribute="bottom" secondItem="oVf-zH-Ygo" secondAttribute="bottom" id="vtb-XU-iqC"/>
+                <constraint firstAttribute="trailing" secondItem="oVf-zH-Ygo" secondAttribute="trailing" id="zn5-fo-Lys"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

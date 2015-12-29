@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OpponentCollectionViewCellIdentifier" id="DcJ-jW-Wec" customClass="OpponentCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="145" height="139"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="145" height="139"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YrK-RN-Emr">
+                        <rect key="frame" x="0.0" y="0.0" width="145" height="139"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvm-2u-znl">
+                        <rect key="frame" x="0.0" y="115" width="145" height="24"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.46114864859999999" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="gEb-uc-T46"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <size key="shadowOffset" width="-1" height="-1"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="vvm-2u-znl" secondAttribute="trailing" id="LgZ-VJ-FZz"/>
+                <constraint firstAttribute="bottom" secondItem="vvm-2u-znl" secondAttribute="bottom" id="SUQ-v1-SYi"/>
+                <constraint firstItem="YrK-RN-Emr" firstAttribute="leading" secondItem="DcJ-jW-Wec" secondAttribute="leading" id="XAt-bI-CsF"/>
+                <constraint firstItem="vvm-2u-znl" firstAttribute="leading" secondItem="DcJ-jW-Wec" secondAttribute="leading" id="eD0-cX-neO"/>
+                <constraint firstAttribute="bottom" secondItem="YrK-RN-Emr" secondAttribute="bottom" id="mhv-eb-Gii"/>
+                <constraint firstAttribute="trailing" secondItem="YrK-RN-Emr" secondAttribute="trailing" id="qba-O4-S3z"/>
+                <constraint firstItem="YrK-RN-Emr" firstAttribute="top" secondItem="DcJ-jW-Wec" secondAttribute="top" id="rXq-zq-gpT"/>
+            </constraints>
+            <connections>
+                <outlet property="containerView" destination="YrK-RN-Emr" id="DXC-fl-feN"/>
+                <outlet property="statusLabel" destination="vvm-2u-znl" id="CdX-UN-am7"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

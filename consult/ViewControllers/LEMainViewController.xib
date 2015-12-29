@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LEMainViewController">
+            <connections>
+                <outlet property="searchBar" destination="NDI-jO-lIb" id="yaO-dW-pUl"/>
+                <outlet property="tableView" destination="HVF-nd-BBk" id="tAW-Av-4jc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="NDI-jO-lIb">
+                    <rect key="frame" x="30" y="80" width="260" height="44"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="gcO-Xq-AJX"/>
+                    </connections>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HVF-nd-BBk">
+                    <rect key="frame" x="10" y="150" width="300" height="310"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="1zF-RH-H3C"/>
+                        <outlet property="delegate" destination="-1" id="dYY-tn-RX7"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="NDI-jO-lIb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="53Z-Hh-MNd"/>
+                <constraint firstAttribute="trailing" secondItem="NDI-jO-lIb" secondAttribute="trailing" constant="30" id="99B-dN-HhD"/>
+                <constraint firstItem="NDI-jO-lIb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="UTG-q2-QKR"/>
+                <constraint firstAttribute="trailing" secondItem="HVF-nd-BBk" secondAttribute="trailing" constant="10" id="XpV-Fg-lx4"/>
+                <constraint firstItem="HVF-nd-BBk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="heB-BK-eoK"/>
+                <constraint firstItem="HVF-nd-BBk" firstAttribute="top" secondItem="NDI-jO-lIb" secondAttribute="bottom" constant="26" id="iN6-Fr-5te"/>
+                <constraint firstAttribute="bottom" secondItem="HVF-nd-BBk" secondAttribute="bottom" constant="20" id="zvU-PA-YTU"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="nUZ-cE-noS" appends="YES" id="ZEN-Lb-8Uh"/>
+            </connections>
+            <point key="canvasLocation" x="358" y="373"/>
+        </view>
+        <tapGestureRecognizer id="nUZ-cE-noS">
+            <connections>
+                <action selector="viewTapRecognizer:" destination="-1" id="V2u-hB-fpH"/>
+                <outlet property="delegate" destination="-1" id="mOI-AP-dyD"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>
