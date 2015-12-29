@@ -88,6 +88,7 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="Ip8-YG-Dvs" firstAttribute="leading" secondItem="EFX-SC-PYS" secondAttribute="leading" constant="40" id="6xc-0P-fWw"/>
                 <constraint firstItem="fxE-w0-0Vg" firstAttribute="top" secondItem="Ip8-YG-Dvs" secondAttribute="bottom" constant="30" id="BLd-2A-cjc"/>
@@ -100,7 +101,15 @@
                 <constraint firstItem="fxE-w0-0Vg" firstAttribute="leading" secondItem="EFX-SC-PYS" secondAttribute="leading" constant="40" id="pcM-yU-48j"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="U3n-GS-KMq" appends="YES" id="XBQ-h6-nfo"/>
+            </connections>
             <point key="canvasLocation" x="325" y="358"/>
         </view>
+        <tapGestureRecognizer id="U3n-GS-KMq">
+            <connections>
+                <action selector="viewTapRecognizer:" destination="-1" id="NZT-FO-rrk"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>

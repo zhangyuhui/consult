@@ -122,6 +122,12 @@
     [UIView commitAnimations];
 }
 
+#pragma UITapGestureRecognizer
+- (IBAction)viewTapRecognizer:(UITapGestureRecognizer *)recognizer {
+    [self.passwordTxtField resignFirstResponder];
+    [self.usernameTextField resignFirstResponder];
+}
+
 - (void)applyConfiguration {
     
     NSMutableArray *iceServers = [NSMutableArray array];
